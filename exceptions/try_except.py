@@ -7,3 +7,4 @@ except ZeroDivisionError:
 
 # note we can still get an (unhandled) ValueError that crashes the program
 # if user enters a non-number on line 2
+
