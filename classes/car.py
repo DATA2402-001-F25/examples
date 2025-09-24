@@ -11,11 +11,22 @@ class Car:
     
 fleet = []
 
-for car_number in range(2):
-    make = input('enter car make')
-    model = input('enter car model')
-    year = int(input('enter car year'))
-    sched = int(input('enter days to next tune-up'))
-    this_car = Car(sched, year, make, model)
-    fleet.append(this_car)
+# a loop that gets car details from user, and creates a Car object for each
+# for car_number in range(2):
+#     make = input('enter car make')
+#     model = input('enter car model')
+#     year = int(input('enter car year'))
+#     sched = int(input('enter days to next tune-up'))
+#     this_car = Car(sched, year, make, model)
+#     fleet.append(this_car)
 
+
+fleet = [
+    Car(0, 1983, 'gmc', 'sierra'),
+    Car(30, 2010, 'porche', 'gt3 911'),
+    Car(4, 1968, 'wayne', 'batmobile')
+]
+
+for car in fleet:
+    if car.maint_sched <= 5:
+        print(car.make, car.model, car.year, 'needs maintenance this week')
