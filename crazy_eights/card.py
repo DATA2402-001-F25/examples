@@ -31,6 +31,3 @@ class Card:
         # pass # your code here
         return (f"{self.rank} of {self.suit}")
     
-my_card = Card("k", "Herats")
-print(my_card)
-print (my_card.get_point_value())

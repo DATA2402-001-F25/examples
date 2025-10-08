@@ -16,7 +16,6 @@ class Deck:
 
         random.shuffle(self.cards)
         return self.cards
-        pass # your code here
 
     def reset(self) -> list:
         """
@@ -49,7 +48,6 @@ class Deck:
 
         self.shuffle()
         return self.cards
-        pass # your code here
 
     def deal(self) -> Card:
         """
@@ -63,9 +61,5 @@ class Deck:
 
         self.cards.remove(first_card)
         return first_card
-        pass # your code here
 
-deck = Deck()
-deck.reset()
-deck.deal()
 

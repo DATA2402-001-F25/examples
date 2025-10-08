@@ -39,6 +39,9 @@ class Hand:
                 playable.append(card)
         return playable
 
+    def is_empty() -> bool:
+        return len(self.cards) == 0
+
     def __repr__(self) -> str:
         """
         return a human-readable string representation of the cards in the hand
