@@ -29,22 +29,22 @@ class Deck:
         SPADE = 13
         i=1
         while i <= SPADE:
-            self.cards.append(f"{i} of spades")
+            self.cards.append(Card(rank=i, suit="spades"))
             i+=1
 
         i=1
         while i <= HEART:
-            self.cards.append(f"{i} of hearts")
+            self.cards.append(Card(rank=i, suit="hearts"))
             i+=1
 
         i=1
         while i <= CLUBS:
-            self.cards.append(f"{i} of clubs")
+            self.cards.append(Card(rank = i, suit="clubs"))
             i+=1
 
         i=1
         while i <= DIAMONDS:
-            self.cards.append(f"{i} of diamonds")
+            self.cards.append(Card(rank=i, suit="diamonds"))
             i+=1
 
         self.shuffle()
@@ -67,5 +67,5 @@ class Deck:
 
 deck = Deck()
 deck.reset()
-print(deck.deal())
+deck.deal()
 
