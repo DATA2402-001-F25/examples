@@ -33,7 +33,7 @@ class CrazyEightsGame:
             top_card=deck.deal()
         playing=True
         while playing:
-            for i in self.player_List[0:1]:
+            for i in self.player_List[0:2]:
                 potential_cards=player.hand.search()
                 while len(potential_cards) == 0:
                     try:
