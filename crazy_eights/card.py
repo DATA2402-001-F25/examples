@@ -2,16 +2,35 @@
 class Card:
 
     def __init__(self, rank: int, suit: str):
-        pass # your code here
+        self.rank = rank 
+        self.suit= suit 
+        
+        # pass # your code here
 
     def get_point_value(self) -> int:
         """
         return the point value for this card
         """
-        pass # your code here
+        if self.rank in [11, 12, 13] or self.rank in ["K", "J", "Q"]:
+            return 10
+        elif self.rank == 1 or self.rank == "A":
+            return 11
+        elif self.rank == 8:
+            return 50
+        else:
+            return self.rank
+             
+
+        
+        # pass # your code here
 
     def __repr__(self) -> str:
         """
         return a human-readable string representation of the card
         """
-        pass # your code here
+        # pass # your code here
+        return (f"{self.rank} of {self.suit}")
+    
+my_card = Card("k", "Herats")
+print(my_card)
+print (my_card.get_point_value())
