@@ -30,7 +30,7 @@ class Fighter(Character):
         super().__init__(name, health)
 
     def save(self, filename: str) -> None:
-        file = open(filename)
+        file = open(filename, 'w')
         file.write(f'{self.name},{self.health},{self.speed}')
         file.close()
     
@@ -45,7 +45,7 @@ class Mage(Character):
         super().__init__(name, health)
 
     def save(self, filename: str) -> None:
-        file = open(filename)
+        file = open(filename, 'w')
         file.write(f'{self.name},{self.health},{self.mana}')
         file.close()
     
