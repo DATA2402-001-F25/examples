@@ -5,7 +5,7 @@ class Character(ABC):
     def __init__(self, name: str, health: int):
         self.name = name
         self.health = health
-    
+
     @abstractmethod
     def save(self, filename: str) -> None:
         """
@@ -29,14 +29,16 @@ class Fighter(Character):
         self.speed = speed
         super().__init__(name, health)
 
-    def save(self, filename: str) -> None:
-        file = open(filename, 'w')
-        file.write(f'{self.name},{self.health},{self.speed}')
-        file.close()
+    # def save(self, filename: str) -> None:
+    #     file = open(filename, 'w')
+    #     file.write(f'{self.name},{self.health},{self.speed}')
+    #     file.close()
     
     def __repr__(self) -> str:
         return f'{self.name} the fighter, with {self.health} health and {self.speed} speed'
 
+
+f = Fighter('sinit', 10, 10)
 
 class Mage(Character):
 
@@ -51,3 +53,6 @@ class Mage(Character):
     
     def __repr__(self) -> str:
         return f'{self.name} the mage, with {self.health} health and {self.mana} mana'
+
+
+f = Fighter('eric', 10, 10)
