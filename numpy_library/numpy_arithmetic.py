@@ -34,3 +34,12 @@ print(mse)
 
 # this would be a one-line version (multi-line probably clearer)
 mse = ((predicted - actual) ** 2).mean()
+
+# logical operations
+arr = np.array([1, 2, 3, 4, 5, 6, 7])
+bigger_than_4 = arr > 4
+less_than_7 = arr < 7
+
+print(bigger_than_4)
+print(less_than_7)
+print(bigger_than_4 & less_than_7)
