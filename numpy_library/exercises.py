@@ -29,3 +29,19 @@ current = np.array([0.5, 0.5])
 # substract coords from current (broadcasts - gives a 100x2 result)
 differences = coords - current
 
+# absolute value
+differences = np.abs(differences)
+
+# add dx to dy
+taxicab = differences[:, 0] + differences[:, 1]
+# or
+taxicab = differences.sum(axis=1)
+print(taxicab)
+
+# find the index of the smallest distance
+idx = taxicab.argmin()
+print(idx, taxicab[idx])
+
+# find the indices of the 3 smallest distances
+# could use argsort
+print(np.argsort(taxicab))
