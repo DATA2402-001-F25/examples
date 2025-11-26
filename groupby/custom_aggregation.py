@@ -5,7 +5,7 @@ def series_range(series: pd.Series) -> float:
     """ custom aggregation - returns range of the series"""
     return series.max() - series.min()
 
-df = pd.read_csv('./groupby/data.csv', index_col=None)
+df = pd.read_csv('./groupby/sales_data.csv', index_col=None)
 
 print(df.groupby('dept')['sales'].agg(series_range))
 
