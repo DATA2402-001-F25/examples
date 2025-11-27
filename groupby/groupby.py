@@ -27,8 +27,12 @@ print(grouped)
 print(grouped[('sales', 'sum')]) # access compound-column name
 
 # do different aggregations on different columns
-print(df.groupby(['dept', 'year'])[['sales', 'rating']].agg({
+df = df.groupby(['dept', 'year'])[['sales', 'rating']].agg({
         'sales': 'sum',
         'rating': ['min', 'max']
     }
-))
+)
+print(df)
+
+# reset the hierarchical index to make this a "normal" dataframe again
+print(df.reset_index(drop=False))
